@@ -52,11 +52,8 @@ export class Water extends Application {
       this.gl.uniform1i(texture.location, index);
     })
 
-    const sizeLoc = this.gl.getUniformLocation(this.wave, 'u_size');
-    this.gl.uniform1f(sizeLoc, 20000);
-
-    const geometrySizeLoc = this.gl.getUniformLocation(this.wave, 'u_geometrySize');
-    this.gl.uniform1f(geometrySizeLoc, 2000);
+    const ratioLoc = this.gl.getUniformLocation(this.wave, 'u_ratio');
+    this.gl.uniform1f(ratioLoc, 0.1);
 
     const projectionMatrixLoc = this.gl.getUniformLocation(this.wave, 'u_projectionMatrix');
     this.gl.uniformMatrix4fv(projectionMatrixLoc, false, this.camera.projection);
@@ -78,7 +75,7 @@ export class Water extends Application {
     const directionalLight = new DirectionalLight(  
       vec4.fromValues(1, 1, 1, 1),
       vec3.normalize(vec3.create(), vec3.fromValues(-1, -1, -1)),
-      1.
+      0.5
     );
     const directionalLightColorLoc = this.gl.getUniformLocation(this.wave,'u_directionalLight.color');
     this.gl.uniform4fv(directionalLightColorLoc,directionalLight.color);

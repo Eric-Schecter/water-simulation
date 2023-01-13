@@ -2,8 +2,6 @@
 
 precision mediump float;
 
-#define saturate(a)clamp(a,0.,1.)
-
 struct DirectionalLight{
   vec4 color;
   vec3 direction;
