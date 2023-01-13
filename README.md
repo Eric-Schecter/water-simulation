@@ -1,7 +1,7 @@
 ## About The Repo
 A demo of water simulation based on texture mapping.  
 
-#### Light
+#### Profile
 ![Wave](./screenshot/profile.gif)  
 
 ## License
