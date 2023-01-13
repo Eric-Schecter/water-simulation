@@ -75,7 +75,7 @@ export class Water extends Application {
     const directionalLight = new DirectionalLight(  
       vec4.fromValues(1, 1, 1, 1),
       vec3.normalize(vec3.create(), vec3.fromValues(-1, -1, -1)),
-      0.5
+      1
     );
     const directionalLightColorLoc = this.gl.getUniformLocation(this.wave,'u_directionalLight.color');
     this.gl.uniform4fv(directionalLightColorLoc,directionalLight.color);
