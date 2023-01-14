@@ -43,10 +43,4 @@ export abstract class Application {
   }
   protected abstract update: (time: number) => void;
   public setup = () => { };
-  protected buildTexture = () => {
-
-  }
-  protected buildFramebuffer = () => {
-
-  }
 }
